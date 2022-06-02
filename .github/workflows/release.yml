@@ -1,0 +1,10 @@
+on:
+  repository_dispatch:
+    types: [release]
+  workflow_dispatch:
+
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: scripts/update.sh
