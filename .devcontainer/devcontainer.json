@@ -22,7 +22,8 @@
 		"rebornix.Ruby",
 		"jnbt.vscode-rufo",
 		"castwide.solargraph",
-		"wingrunr21.vscode-ruby"
+		"wingrunr21.vscode-ruby",
+		"redhat.vscode-yaml"
 	],
 	
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
