@@ -12,7 +12,7 @@ jobs:
       - run: scripts/update.sh
       - name: check for changes to commit
         run: >
-          if git status | grep -q '^ M '; then
+          if git status --porcelain=v1 | grep -q '^ M '; then
             git commit -m "`git diff`";
           else
             echo 'Nothing to change';
