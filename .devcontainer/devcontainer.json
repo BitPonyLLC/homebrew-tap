@@ -23,7 +23,8 @@
 		"jnbt.vscode-rufo",
 		"castwide.solargraph",
 		"wingrunr21.vscode-ruby",
-		"redhat.vscode-yaml"
+		"redhat.vscode-yaml",
+		"esbenp.prettier-vscode"
 	],
 	
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
