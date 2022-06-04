@@ -12,6 +12,8 @@ jobs:
       - run: scripts/update.sh
       - name: check for changes to commit
         run: >
+          git config user.email "bradrf+brewtap@bitpony.com"
+          git config user.name "BitPony Tap"
           if git status --porcelain=v1 | grep -q '^ M '; then
             git commit -m "`git diff`";
           else

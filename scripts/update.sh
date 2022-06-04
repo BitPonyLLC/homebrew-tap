@@ -3,8 +3,8 @@
 set -x
 set -e
 
-name=$(gh release -R BitPonyLLC/huekeys view --json name -q .name)
-gh release -R BitPonyLLC/huekeys download "$name" -p huekeys
+name=$(gh release view -R BitPonyLLC/huekeys --json name -q .name)
+gh release download -R BitPonyLLC/huekeys "$name" -p huekeys
 
 sum=$(sha256sum huekeys | awk '{print $1}')
 rm -f huekeys
