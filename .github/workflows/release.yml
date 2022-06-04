@@ -16,7 +16,7 @@ jobs:
           git config user.email 'bradrf+brewtap@bitpony.com'
           git config user.name 'BitPony Tap'
           if git status --porcelain=v1 | grep -q '^ M '; then
-            git commit -m "`git diff`"
+            git commit -am "`git diff`"
           else
             echo 'Nothing to change'
           fi
