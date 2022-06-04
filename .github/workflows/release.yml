@@ -10,13 +10,13 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: scripts/update.sh
-      - name: check for changes to commit
+      - name: Check for changes to commit
         run: |
           set -e
           git config user.email 'bradrf+brewtap@bitpony.com'
           git config user.name 'BitPony Tap'
           if git status --porcelain=v1 | grep -q '^ M '; then
-            git commit -am "`git diff`"
+            git commit -am "`git diff | grep version`"
             git push
           else
             echo 'Nothing to change'
