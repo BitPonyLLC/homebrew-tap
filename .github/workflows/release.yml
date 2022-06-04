@@ -17,6 +17,7 @@ jobs:
           git config user.name 'BitPony Tap'
           if git status --porcelain=v1 | grep -q '^ M '; then
             git commit -am "`git diff`"
+            git push
           else
             echo 'Nothing to change'
           fi
