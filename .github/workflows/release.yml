@@ -16,7 +16,7 @@ jobs:
           git config user.email 'bradrf+brewtap@bitpony.com'
           git config user.name 'BitPony Tap'
           if git status --porcelain=v1 | grep -q '^ M '; then
-            git commit -am "`git diff | grep version`"
+            git commit -am "`git diff | awk -F\" '/^\+ *version /{print $2}'`"
             git push
           else
             echo 'Nothing to change'
