@@ -11,10 +11,16 @@ class Huekeys < Formula
   depends_on :linux
 
   def install
+    ayatana = 'libayatana-appindicator3-1'
+    `apt list --installed 2>/dev/null | grep -q ^#{ayatana}`
+    unless $?.success?
+      $stderr.puts "huekeys requires #{ayatana} to be installed"
+      system 'sudo', 'apt', 'install', ayatana
+    end
     bin.install 'huekeys'
   end
 
   test do
-    assert_match "v0.4.6", shell_output("#{bin}/huekeys --version", 2)
+    assert_match self.version, shell_output("#{bin}/huekeys --version", 2)
   end
 end
