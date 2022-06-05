@@ -3,9 +3,9 @@
 class Huekeys < Formula
   desc 'Control the keyboard backlight on System76 laptops'
   homepage 'https://github.com/BitPonyLLC/huekeys'
-  url 'https://github.com/BitPonyLLC/huekeys/releases/download/v0.4.5/huekeys'
-  version "v0.4.5"
-  sha256 "a6bdae861017775681df353a9d230e5b1d2c2d0ad36ebca6a6079f2b418d9146"
+  url 'https://github.com/BitPonyLLC/huekeys/releases/download/v0.4.6/huekeys'
+  version "v0.4.6"
+  sha256 "eee1b07e8a23ecb7a4cc4871d94377ad081bdb2e28d148674c9f3bd9993fadd7"
   license 'MIT'
 
   depends_on :linux
@@ -15,6 +15,6 @@ class Huekeys < Formula
   end
 
   test do
-    assert_match "v0.4.5", shell_output("#{bin}/huekeys --version", 2)
+    assert_match "v0.4.6", shell_output("#{bin}/huekeys --version", 2)
   end
 end
