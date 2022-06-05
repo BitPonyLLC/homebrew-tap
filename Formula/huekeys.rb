@@ -3,9 +3,9 @@
 class Huekeys < Formula
   desc 'Control the keyboard backlight on System76 laptops'
   homepage 'https://github.com/BitPonyLLC/huekeys'
-  url 'https://github.com/BitPonyLLC/huekeys/releases/download/v0.4.7/huekeys'
-  version "v0.4.7"
-  sha256 "570b679037b44e8fd22b9329cf44c71406dc36b4ad6b29b541345616430f1b94"
+  url 'https://github.com/BitPonyLLC/huekeys/releases/download/v0.4.8/huekeys'
+  version "v0.4.8"
+  sha256 "15806be4e8e29d11c0b632dc41e00342000d275e9a66335427f290ab8b47a106"
   license 'MIT'
 
   depends_on :linux
