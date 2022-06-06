@@ -15,4 +15,5 @@ rm -f huekeys
 sed -i \
     -e 's|^\(\s*url .*download\)/[^/]*|\1/'${name}'|' \
     -e 's/^\(\s*version\) .*$/\1 "'${name}'"/' \
-    -e 's/^\(\s*sha256\) .*$/\1 "'${sum}'"/'
+    -e 's/^\(\s*sha256\) .*$/\1 "'${sum}'"/' \
+    Formula/huekeys.rb
