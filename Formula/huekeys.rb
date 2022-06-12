@@ -20,6 +20,10 @@ class Huekeys < Formula
     bin.install 'huekeys'
   end
 
+  def post_install
+    system "#{bin}/huekeys", "restart"
+  end
+
   test do
     assert_match self.version, shell_output("#{bin}/huekeys --version", 2)
   end
